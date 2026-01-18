@@ -1,0 +1,148 @@
+:root {
+  --yellow: #f5d547;
+  --yellow-soft: #fff6cc;
+  --white: #ffffff;
+  --gray-100: #f3f4f6;
+  --gray-300: #d1d5db;
+  --gray-700: #374151;
+  --gray-900: #111827;
+
+  --max-width: 1200px;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+/* HEADER */
+.global-header {
+  position: sticky;
+  top: 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+.main-navigation a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--gray-700);
+}
+
+/* HERO */
+.hero-section {
+  background: linear-gradient(180deg, var(--yellow-soft), var(--white));
+  padding: 140px 20px;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 20px;
+}
+
+.section-container {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: var(--yellow);
+  margin-top: 12px;
+}
+
+/* PRODUCT */
+.section-product-highlight {
+  background: var(--gray-100);
+}
+
+.product-highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+}
+
+/* USAGE */
+.usage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.usage-item {
+  background: var(--gray-100);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+/* FOOTER */
+.global-footer {
+  background: var(--yellow);
+  padding: 80px 20px;
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner,
+  .product-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .usage-grid {
+    grid-template-columns: 1fr;
+  }
+}
